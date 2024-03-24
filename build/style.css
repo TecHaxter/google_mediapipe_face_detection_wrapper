@@ -1,0 +1,15 @@
+/* build/style.css */
+div {
+  position: relative;
+  width: 640px;
+  height: 480px;
+}
+video,
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+canvas {
+  z-index: 1;
+}

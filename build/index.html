@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module" src="/dist/index.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button onclick="takeAction()">Detect</button>
+  <div width="640" height="480" style="background-color: blue;">
+    <video width="640" height="480" id="inputVideo" autoplay=""></video>
+    <canvas width="640" height="480" id="outputCanvas"></canvas>
+    <canvas width="640" height="480" id="imageCanvas" hidden=""></canvas>
+  </div>
+  <script>
+    function takeAction() {
+      const video = document.getElementById('inputVideo');
+      const canvas = document.getElementById('imageCanvas');
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      detectFaces(imageData);
+    }
+  </script>
+
+</body></html>

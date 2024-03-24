@@ -1,0 +1,15 @@
+div {
+    position: relative;
+    width: 640px; /* Set the width of the parent div */
+    height: 480px; /* Set the height of the parent div */
+}
+
+video, canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    z-index: 1; /* Place canvas on top of video */
+}
