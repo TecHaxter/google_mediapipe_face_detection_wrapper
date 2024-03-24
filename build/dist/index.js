@@ -2652,7 +2652,7 @@ var GoogleMediaPipeFaceDetectorWrapper = class {
     };
   }
 };
-export {
-  GoogleMediaPipeFaceDetectorWrapper
-};
+// export {
+//   GoogleMediaPipeFaceDetectorWrapper
+// };
 //# sourceMappingURL=index.js.map
